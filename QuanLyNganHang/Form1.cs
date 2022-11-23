@@ -21,7 +21,7 @@ namespace QuanLyNganHang
         private void rBtnCoKyHan_Click(object sender, EventArgs e)
         {
             lblKyHanGui.Visible = true;
-            cBxKyHanGui.Visible = true;
+            cBxKyHanGui.Visible = true; 
 
         }
 
