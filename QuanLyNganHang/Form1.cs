@@ -33,27 +33,57 @@ namespace QuanLyNganHang
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            //string HoTenKhachHang = txtBxTenKhachHang.Text;
-            //string cmnd = txtBxCMND.Text;
-            //double SoTienGui = double.Parse(txtBxSoTienGui.Text);
-            //int ngay = int.Parse(txtBxNgay.Text);
-            //int thang = int.Parse(txtBxThang.Text);
-            //int nam = int.Parse(txtBxNam.Text);
-            //ThoiGian NgayLapSo = new ThoiGian(ngay, thang, nam);
-            //double LaiSuat = 1.2;
+            string HoTenKhachHang = txtBxTenKhachHang.Text;
+            string cmnd = txtBxCMND.Text;
+            double SoTienGui = double.Parse(txtBxSoTienGui.Text);
+            DateTime NgayLapSo = dtpNgayLapSo.Value;
+            double LaiSuat = 5.65;
+            
 
-            //SoTietKiem stk = new SoTietKiem(cmnd, HoTenKhachHang, SoTienGui, NgayLapSo, LaiSuat);
+            if (rBtnGuiCoKyHan.Checked == true)
+            {
+                int KyHan = 1;
 
-            //if(rBtnGuiCoKyHan.Checked == true)
-            //{
-            //    int KyHan = int.Parse(txtBxKyHan.Text);
-            //    CoKyHan STKCoKyHan = new CoKyHan();
-                
-            //}
-            //else if(rBtnGuiKoKyHan.Checked == true)
-            //{
+                switch (cBxKyHanGui.SelectedIndex)
+                {
+                    case 0:
+                        {
+                            LaiSuat = 5.65;
+                            KyHan = 1;
+                            break;
+                        } 
+                    case 1:
+                        {
+                            LaiSuat = 6;
+                            KyHan = 3;
+                            break;
+                        }
+                    case 2:
+                        {
+                            LaiSuat = 7.6;
+                            KyHan = 6;
+                            break;
+                        }
+                    case 3:
+                        {
+                            LaiSuat = 8.04;
+                            KyHan = 12;
+                            break;
+                        }
+                    case 4:
+                        {
+                            LaiSuat = 8.4;
+                            KyHan = 18;
+                            break;
+                        }
+                }
 
-            //}
+                CoKyHan stkCoKyHan = new CoKyHan(cmnd, HoTenKhachHang, SoTienGui, NgayLapSo, LaiSuat, KyHan);
+            }
+            else if (rBtnGuiKoKyHan.Checked == true)
+            {
+
+            }
         }
     }
 }
