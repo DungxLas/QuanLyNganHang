@@ -39,22 +39,13 @@ namespace QuanLyNganHang
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            string HoTenKhachHang = txtBxTenKhachHang.Text;
-            string cmnd = txtBxCMND.Text;
-            double SoTienGui = double.Parse(txtBxSoTienGui.Text);
-            DateTime NgayLapSo = dtpNgayLapSo.Value;
-            double LaiSuat = 1;
-
-            string[] arr = new string[5]; //Tạo 1 mảng và nạp dữ liệu vào mảng đó
-            arr[0] = HoTenKhachHang;
-            arr[1] = cmnd;
-            arr[2] = SoTienGui.ToString();
-            arr[3] = NgayLapSo.ToString("dd/MM/yyyy");
+            NganHang nganhang = new NganHang();
 
             //Đang chọn sổ có kỳ hạn
             if (rBtnGuiCoKyHan.Checked == true)
             {
-                int KyHan = 1;
+                double LaiSuat = 0;
+                int KyHan = 0;
 
                 switch (cBxKyHanGui.SelectedIndex)
                 {
@@ -90,23 +81,25 @@ namespace QuanLyNganHang
                         }
                 }
 
-                //CoKyHan stkCoKyHan = new CoKyHan(cmnd, HoTenKhachHang, SoTienGui, NgayLapSo, LaiSuat, KyHan);
-
-                arr[4] = KyHan.ToString() + " tháng / " + LaiSuat.ToString() + "%";
+                CoKyHan stkCoKyHan = new CoKyHan(txtBxCMND.Text, txtBxTenKhachHang.Text, double.Parse(txtBxSoTienGui.Text), dtpNgayLapSo.Value, LaiSuat, KyHan);
+                nganhang.listSoCoKyHan.Add(stkCoKyHan);
             }
             //Đamg chọn sổ không kỳ hạn
             else if (rBtnGuiKoKyHan.Checked == true)
             {
-                KoKyHan stkKoKyHan = new KoKyHan(txtBxCMND.Text, txtBxTenKhachHang.Text, double.Parse(txtBxSoTienGui.Text), dtpNgayLapSo.Value, LaiSuat);
+                double LaiSuatKoKyHan = double.Parse(txtBxLaiSuatKoKyHan.Text.Remove(txtBxLaiSuatKoKyHan.Text.IndexOf("%")));
 
-                arr[4] = "Không kỳ hạn / " + LaiSuat.ToString() + "%";
+                KoKyHan stkKoKyHan = new KoKyHan(txtBxCMND.Text, txtBxTenKhachHang.Text, double.Parse(txtBxSoTienGui.Text), dtpNgayLapSo.Value, LaiSuatKoKyHan);
+                nganhang.listSoKoKyHan.Add(stkKoKyHan) ;
             }
             //Chưa chọn sổ
             else
             {
                 MessageBox.Show("\nBạn chưa chọn sổ tiết kiệm!!!");
-            }    
+            }
+            MessageBox.Show("\nThêm thành công sổ tiết kiệm");
 
+            string[] arr = new string[5]; //Tạo 1 mảng và nạp dữ liệu vào mảng đó
             ListViewItem item = new ListViewItem(arr); //Tạo 1 list item ứng với từng dữ liệu
 
             listViewDanhSachSo.Items.Add(item); //Nạp list item vào listView
