@@ -53,6 +53,8 @@
             this.clSoTienGui = new System.Windows.Forms.ColumnHeader();
             this.clNgayLapSo = new System.Windows.Forms.ColumnHeader();
             this.clKyhanLaisuat = new System.Windows.Forms.ColumnHeader();
+            this.lblLaiSuat = new System.Windows.Forms.Label();
+            this.txtBxLaiSuatKoKyHan = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -230,7 +232,7 @@
             // cBxKyHanGui
             // 
             this.cBxKyHanGui.FormattingEnabled = true;
-            this.cBxKyHanGui.Location = new System.Drawing.Point(347, 231);
+            this.cBxKyHanGui.Location = new System.Drawing.Point(347, 236);
             this.cBxKyHanGui.Name = "cBxKyHanGui";
             this.cBxKyHanGui.Size = new System.Drawing.Size(209, 31);
             this.cBxKyHanGui.TabIndex = 32;
@@ -286,11 +288,33 @@
             this.clKyhanLaisuat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.clKyhanLaisuat.Width = 120;
             // 
+            // lblLaiSuat
+            // 
+            this.lblLaiSuat.AutoSize = true;
+            this.lblLaiSuat.Location = new System.Drawing.Point(278, 286);
+            this.lblLaiSuat.Name = "lblLaiSuat";
+            this.lblLaiSuat.Size = new System.Drawing.Size(76, 23);
+            this.lblLaiSuat.TabIndex = 34;
+            this.lblLaiSuat.Text = "Lãi suất";
+            this.lblLaiSuat.Visible = false;
+            // 
+            // txtBxLaiSuatKoKyHan
+            // 
+            this.txtBxLaiSuatKoKyHan.Enabled = false;
+            this.txtBxLaiSuatKoKyHan.Location = new System.Drawing.Point(360, 283);
+            this.txtBxLaiSuatKoKyHan.Name = "txtBxLaiSuatKoKyHan";
+            this.txtBxLaiSuatKoKyHan.Size = new System.Drawing.Size(42, 32);
+            this.txtBxLaiSuatKoKyHan.TabIndex = 35;
+            this.txtBxLaiSuatKoKyHan.Text = "1%";
+            this.txtBxLaiSuatKoKyHan.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(698, 720);
+            this.Controls.Add(this.txtBxLaiSuatKoKyHan);
+            this.Controls.Add(this.lblLaiSuat);
             this.Controls.Add(this.listViewDanhSachSo);
             this.Controls.Add(this.lblKyHanGui);
             this.Controls.Add(this.cBxKyHanGui);
@@ -348,5 +372,7 @@
         private ColumnHeader clSoTienGui;
         private ColumnHeader clNgayLapSo;
         private ColumnHeader clKyhanLaisuat;
+        private Label lblLaiSuat;
+        private TextBox txtBxLaiSuatKoKyHan;
     }
 }

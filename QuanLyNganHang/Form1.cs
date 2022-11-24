@@ -22,14 +22,19 @@ namespace QuanLyNganHang
         private void rBtnCoKyHan_Click(object sender, EventArgs e)
         {
             lblKyHanGui.Visible = true;
-            cBxKyHanGui.Visible = true; 
+            cBxKyHanGui.Visible = true;
 
+            lblLaiSuat.Visible = false;
+            txtBxLaiSuatKoKyHan.Visible = false;
         }
 
         private void rBtnGuiKoKyHan_Click(object sender, EventArgs e)
         {
             lblKyHanGui.Visible = false;
             cBxKyHanGui.Visible = false;
+
+            lblLaiSuat.Visible = true;
+            txtBxLaiSuatKoKyHan.Visible = true;
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -46,6 +51,7 @@ namespace QuanLyNganHang
             arr[2] = SoTienGui.ToString();
             arr[3] = NgayLapSo.ToString("dd/MM/yyyy");
 
+            //Đang chọn sổ có kỳ hạn
             if (rBtnGuiCoKyHan.Checked == true)
             {
                 int KyHan = 1;
@@ -88,12 +94,18 @@ namespace QuanLyNganHang
 
                 arr[4] = KyHan.ToString() + " tháng / " + LaiSuat.ToString() + "%";
             }
+            //Đamg chọn sổ không kỳ hạn
             else if (rBtnGuiKoKyHan.Checked == true)
             {
-                //KoKyHan stkKoKyHan = new KoKyHan(cmnd, HoTenKhachHang, SoTienGui, NgayLapSo, LaiSuat);
+                KoKyHan stkKoKyHan = new KoKyHan(txtBxCMND.Text, txtBxTenKhachHang.Text, double.Parse(txtBxSoTienGui.Text), dtpNgayLapSo.Value, LaiSuat);
 
                 arr[4] = "Không kỳ hạn / " + LaiSuat.ToString() + "%";
             }
+            //Chưa chọn sổ
+            else
+            {
+                MessageBox.Show("\nBạn chưa chọn sổ tiết kiệm!!!");
+            }    
 
             ListViewItem item = new ListViewItem(arr); //Tạo 1 list item ứng với từng dữ liệu
 
@@ -106,14 +118,7 @@ namespace QuanLyNganHang
             
             if (dlr == DialogResult.Yes)
             {
-                for (int i = 0; i < listViewDanhSachSo.Items.Count; i++)
-                {
-                    if (listViewDanhSachSo.Items[i].Selected)
-                    {
-                        listViewDanhSachSo.Items[i].Remove();
-                        break;
-                    }
-                }
+                listViewDanhSachSo.Items.Remove(listViewDanhSachSo.SelectedItems[0]);
             }
             else if (dlr == DialogResult.No)
             {
@@ -124,7 +129,16 @@ namespace QuanLyNganHang
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            string HoTenKhachHang = listViewDanhSachSo.SelectedItems[0].SubItems[0].Text;
+            string cmnd = listViewDanhSachSo.SelectedItems[0].SubItems[1].Text;
+            double SoTienGui = double.Parse(listViewDanhSachSo.SelectedItems[0].SubItems[2].Text);
+            string NgayLapSo = listViewDanhSachSo.SelectedItems[0].SubItems[3].Text;
+            string LaiSuat = listViewDanhSachSo.SelectedItems[0].SubItems[4].Text; ;
 
+            //CoKyHan stkCoKyHan = new CoKyHan(cmnd, HoTenKhachHang, SoTienGui, NgayLapSo, LaiSuat, KyHan);
+
+            Form2 frm2 = new Form2();
+            
         }
     }
 }
