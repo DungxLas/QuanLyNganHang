@@ -147,9 +147,10 @@ namespace QuanLyNganHang
             string NgayLapSo = listViewDanhSachSo.SelectedItems[0].SubItems[3].Text;
             string LaiSuat = listViewDanhSachSo.SelectedItems[0].SubItems[4].Text; ;
 
-            //CoKyHan stkCoKyHan = new CoKyHan(cmnd, HoTenKhachHang, SoTienGui, NgayLapSo, LaiSuat, KyHan);
+            CoKyHan stkCoKyHan = new CoKyHan();
 
             Form2 frm2 = new Form2();
+            frm2.stk = stkCoKyHan;
             
         }
     }

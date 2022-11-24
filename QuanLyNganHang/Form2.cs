@@ -17,8 +17,12 @@ namespace QuanLyNganHang
             InitializeComponent();
         }
 
+        public CoKyHan ooo { get; set; }
+
         private void Form2_Load(object sender, EventArgs e)
         {
+            //CoKyHan stk = new CoKyHan();
+
             cBxKyHanGui.Items.Add("01 tháng / 5.65%");
             cBxKyHanGui.Items.Add("03 tháng / 6.00%");
             cBxKyHanGui.Items.Add("06 tháng / 7.60%");
