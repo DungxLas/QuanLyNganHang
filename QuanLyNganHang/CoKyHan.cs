@@ -26,14 +26,14 @@ namespace QuanLyNganHang
             this.KyHan = stkCoKyHan.KyHan;
         }
 
-        public string[] xuatSTK()
+        public List<string> xuatSTK()
         {
-            string[] stk = new string[5];
-            stk[0] = cmnd;
-            stk[1] = HoTen;
-            stk[2] = SoTienGui.ToString();
-            stk[3] = NgayLapSo.ToString("dd/MM/yyyy");
-            stk[4] = KyHan.ToString() + " tháng / " + LaiSuat.ToString() + " %";
+            List<string> stk = new List<string>();
+            stk.Add(HoTen);
+            stk.Add(cmnd);
+            stk.Add(SoTienGui.ToString());
+            stk.Add(NgayLapSo.ToString("dd/MM/yyyy"));
+            stk.Add(KyHan.ToString() + " tháng / " + LaiSuat.ToString() + " %");
 
             return stk;
         }

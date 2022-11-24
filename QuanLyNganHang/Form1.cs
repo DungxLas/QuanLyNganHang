@@ -39,6 +39,8 @@ namespace QuanLyNganHang
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+            List<string> arr = new List<string>(); //Tạo 1 mảng để nạp dữ liệu vào mảng đó
+
             NganHang nganhang = new NganHang();
 
             //Đang chọn sổ có kỳ hạn
@@ -82,7 +84,15 @@ namespace QuanLyNganHang
                 }
 
                 CoKyHan stkCoKyHan = new CoKyHan(txtBxCMND.Text, txtBxTenKhachHang.Text, double.Parse(txtBxSoTienGui.Text), dtpNgayLapSo.Value, LaiSuat, KyHan);
+                
+                arr = stkCoKyHan.xuatSTK(); //nạp dữ liệu vào mảng
+                arr.Insert(0, listViewDanhSachSo.Items.Count.ToString());
+                ListViewItem item = new ListViewItem(arr.ToArray()); //Tạo 1 list item ứng với từng dữ liệu
+                listViewDanhSachSo.Items.Add(item); //Nạp list item vào listView
+
                 nganhang.listSoCoKyHan.Add(stkCoKyHan);
+
+                MessageBox.Show("\nThêm thành công sổ tiết kiệm");
             }
             //Đamg chọn sổ không kỳ hạn
             else if (rBtnGuiKoKyHan.Checked == true)
@@ -90,19 +100,21 @@ namespace QuanLyNganHang
                 double LaiSuatKoKyHan = double.Parse(txtBxLaiSuatKoKyHan.Text.Remove(txtBxLaiSuatKoKyHan.Text.IndexOf("%")));
 
                 KoKyHan stkKoKyHan = new KoKyHan(txtBxCMND.Text, txtBxTenKhachHang.Text, double.Parse(txtBxSoTienGui.Text), dtpNgayLapSo.Value, LaiSuatKoKyHan);
+                
+                arr = stkKoKyHan.xuatSTK(); //nạp dữ liệu vào mảng
+                ListViewItem item = new ListViewItem(arr.ToArray()); //Tạo 1 list item ứng với từng dữ liệu
+                arr.Insert(0, listViewDanhSachSo.Items.Count.ToString());
+                listViewDanhSachSo.Items.Add(item); //Nạp list item vào listView
+
                 nganhang.listSoKoKyHan.Add(stkKoKyHan) ;
+
+                MessageBox.Show("\nThêm thành công sổ tiết kiệm");
             }
             //Chưa chọn sổ
             else
             {
                 MessageBox.Show("\nBạn chưa chọn sổ tiết kiệm!!!");
-            }
-            MessageBox.Show("\nThêm thành công sổ tiết kiệm");
-
-            string[] arr = new string[5]; //Tạo 1 mảng và nạp dữ liệu vào mảng đó
-            ListViewItem item = new ListViewItem(arr); //Tạo 1 list item ứng với từng dữ liệu
-
-            listViewDanhSachSo.Items.Add(item); //Nạp list item vào listView
+            } 
         }
 
         private void btnXoa_Click(object sender, EventArgs e)

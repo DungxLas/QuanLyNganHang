@@ -55,6 +55,7 @@
             this.clKyhanLaisuat = new System.Windows.Forms.ColumnHeader();
             this.lblLaiSuat = new System.Windows.Forms.Label();
             this.txtBxLaiSuatKoKyHan = new System.Windows.Forms.TextBox();
+            this.clStt = new System.Windows.Forms.ColumnHeader();
             this.SuspendLayout();
             // 
             // label1
@@ -240,9 +241,10 @@
             // 
             // listViewDanhSachSo
             // 
-            this.listViewDanhSachSo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.listViewDanhSachSo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.listViewDanhSachSo.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.listViewDanhSachSo.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.clStt,
             this.clTenKhachHang,
             this.clCMND,
             this.clSoTienGui,
@@ -251,9 +253,9 @@
             this.listViewDanhSachSo.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.listViewDanhSachSo.FullRowSelect = true;
             this.listViewDanhSachSo.GridLines = true;
-            this.listViewDanhSachSo.Location = new System.Drawing.Point(63, 399);
+            this.listViewDanhSachSo.Location = new System.Drawing.Point(46, 399);
             this.listViewDanhSachSo.Name = "listViewDanhSachSo";
-            this.listViewDanhSachSo.Size = new System.Drawing.Size(606, 278);
+            this.listViewDanhSachSo.Size = new System.Drawing.Size(623, 278);
             this.listViewDanhSachSo.TabIndex = 33;
             this.listViewDanhSachSo.TileSize = new System.Drawing.Size(1, 1);
             this.listViewDanhSachSo.UseCompatibleStateImageBehavior = false;
@@ -262,6 +264,7 @@
             // clTenKhachHang
             // 
             this.clTenKhachHang.Text = "Tên Khách Hàng";
+            this.clTenKhachHang.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.clTenKhachHang.Width = 120;
             // 
             // clCMND
@@ -307,6 +310,11 @@
             this.txtBxLaiSuatKoKyHan.TabIndex = 35;
             this.txtBxLaiSuatKoKyHan.Text = "1%";
             this.txtBxLaiSuatKoKyHan.Visible = false;
+            // 
+            // clStt
+            // 
+            this.clStt.Text = "STT";
+            this.clStt.Width = 50;
             // 
             // Form1
             // 
@@ -374,5 +382,6 @@
         private ColumnHeader clKyhanLaisuat;
         private Label lblLaiSuat;
         private TextBox txtBxLaiSuatKoKyHan;
+        private ColumnHeader clStt;
     }
 }

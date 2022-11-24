@@ -23,11 +23,16 @@ namespace QuanLyNganHang
             
         }
 
-        //public double TinhTienLoi()
-        //{
-        //    int SoThangGui;
+        public List<string> xuatSTK()
+        {
+            List<string> stk = new List<string>();
+            stk.Add(HoTen);
+            stk.Add(cmnd);
+            stk.Add(SoTienGui.ToString());
+            stk.Add(NgayLapSo.ToString("dd/MM/yyyy"));
+            stk.Add(" Không kỳ hạn / " + LaiSuat.ToString() + " %");
 
-        //    return SoTienGui * LaiSuat * SoThangGui;
-        //}
+            return stk;
+        }
     }
 }
