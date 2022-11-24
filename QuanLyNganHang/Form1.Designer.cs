@@ -48,6 +48,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.cBxKyHanGui = new System.Windows.Forms.ComboBox();
             this.listViewDanhSachSo = new System.Windows.Forms.ListView();
+            this.clStt = new System.Windows.Forms.ColumnHeader();
             this.clTenKhachHang = new System.Windows.Forms.ColumnHeader();
             this.clCMND = new System.Windows.Forms.ColumnHeader();
             this.clSoTienGui = new System.Windows.Forms.ColumnHeader();
@@ -55,7 +56,6 @@
             this.clKyhanLaisuat = new System.Windows.Forms.ColumnHeader();
             this.lblLaiSuat = new System.Windows.Forms.Label();
             this.txtBxLaiSuatKoKyHan = new System.Windows.Forms.TextBox();
-            this.clStt = new System.Windows.Forms.ColumnHeader();
             this.SuspendLayout();
             // 
             // label1
@@ -261,6 +261,11 @@
             this.listViewDanhSachSo.UseCompatibleStateImageBehavior = false;
             this.listViewDanhSachSo.View = System.Windows.Forms.View.Details;
             // 
+            // clStt
+            // 
+            this.clStt.Text = "STT";
+            this.clStt.Width = 50;
+            // 
             // clTenKhachHang
             // 
             this.clTenKhachHang.Text = "Tên Khách Hàng";
@@ -310,11 +315,6 @@
             this.txtBxLaiSuatKoKyHan.TabIndex = 35;
             this.txtBxLaiSuatKoKyHan.Text = "1%";
             this.txtBxLaiSuatKoKyHan.Visible = false;
-            // 
-            // clStt
-            // 
-            this.clStt.Text = "STT";
-            this.clStt.Width = 50;
             // 
             // Form1
             // 

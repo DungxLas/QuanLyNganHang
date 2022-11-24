@@ -86,7 +86,7 @@ namespace QuanLyNganHang
                 CoKyHan stkCoKyHan = new CoKyHan(txtBxCMND.Text, txtBxTenKhachHang.Text, double.Parse(txtBxSoTienGui.Text), dtpNgayLapSo.Value, LaiSuat, KyHan);
                 
                 arr = stkCoKyHan.xuatSTK(); //nạp dữ liệu vào mảng
-                arr.Insert(0, listViewDanhSachSo.Items.Count.ToString());
+                arr.Insert(0, (listViewDanhSachSo.Items.Count + 1).ToString());
                 ListViewItem item = new ListViewItem(arr.ToArray()); //Tạo 1 list item ứng với từng dữ liệu
                 listViewDanhSachSo.Items.Add(item); //Nạp list item vào listView
 
@@ -102,8 +102,8 @@ namespace QuanLyNganHang
                 KoKyHan stkKoKyHan = new KoKyHan(txtBxCMND.Text, txtBxTenKhachHang.Text, double.Parse(txtBxSoTienGui.Text), dtpNgayLapSo.Value, LaiSuatKoKyHan);
                 
                 arr = stkKoKyHan.xuatSTK(); //nạp dữ liệu vào mảng
+                arr.Insert(0, (listViewDanhSachSo.Items.Count + 1).ToString());
                 ListViewItem item = new ListViewItem(arr.ToArray()); //Tạo 1 list item ứng với từng dữ liệu
-                arr.Insert(0, listViewDanhSachSo.Items.Count.ToString());
                 listViewDanhSachSo.Items.Add(item); //Nạp list item vào listView
 
                 nganhang.listSoKoKyHan.Add(stkKoKyHan) ;
@@ -123,7 +123,14 @@ namespace QuanLyNganHang
             
             if (dlr == DialogResult.Yes)
             {
+                int indexSelectItem = int.Parse(listViewDanhSachSo.SelectedItems[0].SubItems[0].Text) - 1;
+
                 listViewDanhSachSo.Items.Remove(listViewDanhSachSo.SelectedItems[0]);
+
+                for (int i = indexSelectItem; i < listViewDanhSachSo.Items.Count; i++)
+                {
+                    listViewDanhSachSo.Items[i].SubItems[0].Text = (i + 1).ToString();
+                }
             }
             else if (dlr == DialogResult.No)
             {
