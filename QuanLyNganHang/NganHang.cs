@@ -14,5 +14,15 @@ namespace QuanLyNganHang
         internal List<CoKyHan> listSoCoKyHan { get => ListSoCoKyHan; set => ListSoCoKyHan = value; }
         internal List<KoKyHan> listSoKoKyHan { get => ListSoKoKyHan; set => ListSoKoKyHan = value; }
 
+        public int timSTK(string maSTK)
+        {
+            int ListSoCoKyHan_count = ListSoCoKyHan.Count;
+            for(int i = 0; i < ListSoCoKyHan_count; i++)
+            {
+                if (ListSoCoKyHan[i].)
+            }    
+
+            int ListSoKoKyHan_count = ListSoKoKyHan.Count;
+        }
     }
 }

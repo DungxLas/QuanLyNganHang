@@ -255,7 +255,7 @@
             this.listViewDanhSachSo.GridLines = true;
             this.listViewDanhSachSo.Location = new System.Drawing.Point(46, 399);
             this.listViewDanhSachSo.Name = "listViewDanhSachSo";
-            this.listViewDanhSachSo.Size = new System.Drawing.Size(623, 278);
+            this.listViewDanhSachSo.Size = new System.Drawing.Size(656, 278);
             this.listViewDanhSachSo.TabIndex = 33;
             this.listViewDanhSachSo.TileSize = new System.Drawing.Size(1, 1);
             this.listViewDanhSachSo.UseCompatibleStateImageBehavior = false;
@@ -320,7 +320,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(698, 720);
+            this.ClientSize = new System.Drawing.Size(731, 720);
             this.Controls.Add(this.txtBxLaiSuatKoKyHan);
             this.Controls.Add(this.lblLaiSuat);
             this.Controls.Add(this.listViewDanhSachSo);

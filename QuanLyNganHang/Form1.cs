@@ -19,7 +19,6 @@ namespace QuanLyNganHang
             cBxKyHanGui.Items.Add("18 tháng / 8.40%");
 
             cBxKyHanGui.SelectedIndex = 0;
-
         }
 
         private void rBtnCoKyHan_Click(object sender, EventArgs e)
