@@ -14,15 +14,44 @@ namespace QuanLyNganHang
         internal List<CoKyHan> listSoCoKyHan { get => ListSoCoKyHan; set => ListSoCoKyHan = value; }
         internal List<KoKyHan> listSoKoKyHan { get => ListSoKoKyHan; set => ListSoKoKyHan = value; }
 
-        public int timSTK(string maSTK)
+        public int timSTKCoKyHan(string maSTK)
         {
             int ListSoCoKyHan_count = ListSoCoKyHan.Count;
             for(int i = 0; i < ListSoCoKyHan_count; i++)
             {
-                if (ListSoCoKyHan[i].)
-            }    
+                if (ListSoCoKyHan[i].maSTK_get() == maSTK)
+                {
+                    return i;
+                }
+            } 
 
+            return -1; //Không tìm thấy sổ
+        }
+
+        public void xoaSTKCoKyHan(string maSTK)
+        {
+            int stkMuonXoa_index = timSTKCoKyHan(maSTK);
+            ListSoCoKyHan.RemoveAt(stkMuonXoa_index);
+        }
+
+        public int timSTKKoKyHan(string maSTK)
+        {
             int ListSoKoKyHan_count = ListSoKoKyHan.Count;
+            for (int i = 0; i < ListSoKoKyHan_count; i++)
+            {
+                if (ListSoKoKyHan[i].maSTK_get() == maSTK)
+                {
+                    return i;
+                }
+            }
+
+            return -1; //Không tìm thấy sổ
+        }
+
+        public void xoaSTKKoKyHan(string maSTK)
+        {
+            int stkMuonXoa_index = timSTKKoKyHan(maSTK);
+            ListSoKoKyHan.RemoveAt(stkMuonXoa_index);
         }
     }
 }

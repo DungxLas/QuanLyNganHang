@@ -34,6 +34,7 @@ namespace QuanLyNganHang
             stk.Add(SoTienGui.ToString());
             stk.Add(NgayLapSo.ToString("dd/MM/yyyy"));
             stk.Add(KyHan.ToString() + " tháng / " + LaiSuat.ToString() + " %");
+            stk.Add(maSTK);
 
             return stk;
         }

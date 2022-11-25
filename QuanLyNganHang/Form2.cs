@@ -17,7 +17,7 @@ namespace QuanLyNganHang
             InitializeComponent();
         }
 
-        public CoKyHan ooo { get; set; }
+        //public CoKyHan ooo { get; set; }
 
         private void Form2_Load(object sender, EventArgs e)
         {

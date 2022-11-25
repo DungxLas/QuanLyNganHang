@@ -123,10 +123,27 @@ namespace QuanLyNganHang
             
             if (dlr == DialogResult.Yes)
             {
+                //Bước 1: Xoá STK trong class NganHang
+                string maSTK_Xoa = listViewDanhSachSo.SelectedItems[0].SubItems[6].Text;
+
+                char kyTuDauCotKyHanLaiSuat = listViewDanhSachSo.SelectedItems[0].SubItems[5].Text[0];
+                //Nếu ký tự đầu của ổ Kỳ hạn/Lãi  suất là số => đó là STK có kỳ hạn
+                if (kyTuDauCotKyHanLaiSuat >= '0' && kyTuDauCotKyHanLaiSuat <= '9')
+                {
+                    nganhang.xoaSTKCoKyHan(maSTK_Xoa);
+                }
+                //Ngược lại là STK ko kỳ hạn
+                else
+                {
+                    nganhang.xoaSTKKoKyHan(maSTK_Xoa);
+                }
+
+                //Bước 2: Xoá STK trong ListView
                 int indexSelectItem = int.Parse(listViewDanhSachSo.SelectedItems[0].SubItems[0].Text) - 1;
 
                 listViewDanhSachSo.Items.Remove(listViewDanhSachSo.SelectedItems[0]);
 
+                //Bước 3: Đặt lại số thứ tự
                 for (int i = indexSelectItem; i < listViewDanhSachSo.Items.Count; i++)
                 {
                     listViewDanhSachSo.Items[i].SubItems[0].Text = (i + 1).ToString();
@@ -141,16 +158,16 @@ namespace QuanLyNganHang
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            string HoTenKhachHang = listViewDanhSachSo.SelectedItems[0].SubItems[0].Text;
-            string cmnd = listViewDanhSachSo.SelectedItems[0].SubItems[1].Text;
-            double SoTienGui = double.Parse(listViewDanhSachSo.SelectedItems[0].SubItems[2].Text);
-            string NgayLapSo = listViewDanhSachSo.SelectedItems[0].SubItems[3].Text;
-            string LaiSuat = listViewDanhSachSo.SelectedItems[0].SubItems[4].Text; ;
+            //string HoTenKhachHang = listViewDanhSachSo.SelectedItems[0].SubItems[0].Text;
+            //string cmnd = listViewDanhSachSo.SelectedItems[0].SubItems[1].Text;
+            //double SoTienGui = double.Parse(listViewDanhSachSo.SelectedItems[0].SubItems[2].Text);
+            //string NgayLapSo = listViewDanhSachSo.SelectedItems[0].SubItems[3].Text;
+            //string LaiSuat = listViewDanhSachSo.SelectedItems[0].SubItems[4].Text; ;
 
-            CoKyHan stkCoKyHan = new CoKyHan();
+            //CoKyHan stkCoKyHan = new CoKyHan();
 
-            Form2 frm2 = new Form2();
-            frm2.stk = stkCoKyHan;
+            //Form2 frm2 = new Form2();
+            //frm2.stk = stkCoKyHan;
             
         }
     }

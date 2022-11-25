@@ -56,6 +56,7 @@
             this.clKyhanLaisuat = new System.Windows.Forms.ColumnHeader();
             this.lblLaiSuat = new System.Windows.Forms.Label();
             this.txtBxLaiSuatKoKyHan = new System.Windows.Forms.TextBox();
+            this.clmaSTK = new System.Windows.Forms.ColumnHeader();
             this.SuspendLayout();
             // 
             // label1
@@ -249,13 +250,14 @@
             this.clCMND,
             this.clSoTienGui,
             this.clNgayLapSo,
-            this.clKyhanLaisuat});
+            this.clKyhanLaisuat,
+            this.clmaSTK});
             this.listViewDanhSachSo.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.listViewDanhSachSo.FullRowSelect = true;
             this.listViewDanhSachSo.GridLines = true;
             this.listViewDanhSachSo.Location = new System.Drawing.Point(46, 399);
             this.listViewDanhSachSo.Name = "listViewDanhSachSo";
-            this.listViewDanhSachSo.Size = new System.Drawing.Size(656, 278);
+            this.listViewDanhSachSo.Size = new System.Drawing.Size(654, 278);
             this.listViewDanhSachSo.TabIndex = 33;
             this.listViewDanhSachSo.TileSize = new System.Drawing.Size(1, 1);
             this.listViewDanhSachSo.UseCompatibleStateImageBehavior = false;
@@ -315,6 +317,11 @@
             this.txtBxLaiSuatKoKyHan.TabIndex = 35;
             this.txtBxLaiSuatKoKyHan.Text = "1%";
             this.txtBxLaiSuatKoKyHan.Visible = false;
+            // 
+            // clmaSTK
+            // 
+            this.clmaSTK.Text = "Mã sổ tiết kiệm";
+            this.clmaSTK.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Form1
             // 
@@ -383,5 +390,6 @@
         private Label lblLaiSuat;
         private TextBox txtBxLaiSuatKoKyHan;
         private ColumnHeader clStt;
+        private ColumnHeader clmaSTK;
     }
 }

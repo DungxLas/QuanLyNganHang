@@ -13,9 +13,9 @@ namespace QuanLyNganHang
         protected double SoTienGui;
         protected DateTime NgayLapSo;
         protected double LaiSuat;
-        private string maSTK;
+        protected string maSTK;
 
-        protected string MaSTK { get => maSTK; set => maSTK = value; }
+        //protected string MaSTK { get => maSTK; set => maSTK = value; }
 
         public string taoMaSTK()
         {
@@ -61,6 +61,11 @@ namespace QuanLyNganHang
             NgayLapSo = stk.NgayLapSo;
             LaiSuat = stk.LaiSuat;
             maSTK = taoMaSTK();
+        }
+
+        public string maSTK_get()
+        {
+            return maSTK;
         }
     }
 }
