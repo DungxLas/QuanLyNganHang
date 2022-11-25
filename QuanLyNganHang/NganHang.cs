@@ -14,6 +14,7 @@ namespace QuanLyNganHang
         internal List<CoKyHan> listSoCoKyHan { get => ListSoCoKyHan; set => ListSoCoKyHan = value; }
         internal List<KoKyHan> listSoKoKyHan { get => ListSoKoKyHan; set => ListSoKoKyHan = value; }
 
+        //Tìm STK Có kỳ Hạn với mã STK 
         public int timSTKCoKyHan(string maSTK)
         {
             int ListSoCoKyHan_count = ListSoCoKyHan.Count;
@@ -28,12 +29,14 @@ namespace QuanLyNganHang
             return -1; //Không tìm thấy sổ
         }
 
+        //Xoá STK Có kỳ Hạn với mã STK 
         public void xoaSTKCoKyHan(string maSTK)
         {
             int stkMuonXoa_index = timSTKCoKyHan(maSTK);
             ListSoCoKyHan.RemoveAt(stkMuonXoa_index);
         }
 
+        //Tìm STK Ko kỳ Hạn với mã STK 
         public int timSTKKoKyHan(string maSTK)
         {
             int ListSoKoKyHan_count = ListSoKoKyHan.Count;
@@ -48,6 +51,7 @@ namespace QuanLyNganHang
             return -1; //Không tìm thấy sổ
         }
 
+        //Xoá STK Ko kỳ Hạn với mã STK 
         public void xoaSTKKoKyHan(string maSTK)
         {
             int stkMuonXoa_index = timSTKKoKyHan(maSTK);

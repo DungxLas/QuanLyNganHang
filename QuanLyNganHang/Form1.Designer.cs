@@ -54,9 +54,9 @@
             this.clSoTienGui = new System.Windows.Forms.ColumnHeader();
             this.clNgayLapSo = new System.Windows.Forms.ColumnHeader();
             this.clKyhanLaisuat = new System.Windows.Forms.ColumnHeader();
+            this.clmaSTK = new System.Windows.Forms.ColumnHeader();
             this.lblLaiSuat = new System.Windows.Forms.Label();
             this.txtBxLaiSuatKoKyHan = new System.Windows.Forms.TextBox();
-            this.clmaSTK = new System.Windows.Forms.ColumnHeader();
             this.SuspendLayout();
             // 
             // label1
@@ -298,9 +298,15 @@
             this.clKyhanLaisuat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.clKyhanLaisuat.Width = 120;
             // 
+            // clmaSTK
+            // 
+            this.clmaSTK.Text = "Mã sổ tiết kiệm";
+            this.clmaSTK.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // lblLaiSuat
             // 
             this.lblLaiSuat.AutoSize = true;
+            this.lblLaiSuat.Enabled = false;
             this.lblLaiSuat.Location = new System.Drawing.Point(278, 286);
             this.lblLaiSuat.Name = "lblLaiSuat";
             this.lblLaiSuat.Size = new System.Drawing.Size(76, 23);
@@ -317,11 +323,6 @@
             this.txtBxLaiSuatKoKyHan.TabIndex = 35;
             this.txtBxLaiSuatKoKyHan.Text = "1%";
             this.txtBxLaiSuatKoKyHan.Visible = false;
-            // 
-            // clmaSTK
-            // 
-            this.clmaSTK.Text = "Mã sổ tiết kiệm";
-            this.clmaSTK.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Form1
             // 

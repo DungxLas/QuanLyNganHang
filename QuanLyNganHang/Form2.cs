@@ -10,19 +10,17 @@ using System.Windows.Forms;
 
 namespace QuanLyNganHang
 {
-    public partial class Form2 : Form
+    public partial class frmCapNhap : Form
     {
-        public Form2()
+        public frmCapNhap()
         {
             InitializeComponent();
         }
 
-        //public CoKyHan ooo { get; set; }
+        //public CoKyHan ooo;
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            //CoKyHan stk = new CoKyHan();
-
             cBxKyHanGui.Items.Add("01 tháng / 5.65%");
             cBxKyHanGui.Items.Add("03 tháng / 6.00%");
             cBxKyHanGui.Items.Add("06 tháng / 7.60%");
@@ -30,6 +28,24 @@ namespace QuanLyNganHang
             cBxKyHanGui.Items.Add("18 tháng / 8.40%");
 
             cBxKyHanGui.SelectedIndex = 0;
+        }
+
+        private void rBtnCoKyHan_Click(object sender, EventArgs e)
+        {
+            lblKyHanGui.Visible = true;
+            cBxKyHanGui.Visible = true;
+
+            lblLaiSuat.Visible = false;
+            txtBxLaiSuatKoKyHan.Visible = false;
+        }
+
+        private void rBtnGuiKoKyHan_Click(object sender, EventArgs e)
+        {
+            lblKyHanGui.Visible = false;
+            cBxKyHanGui.Visible = false;
+
+            lblLaiSuat.Visible = true;
+            txtBxLaiSuatKoKyHan.Visible = true;
         }
     }
 }

@@ -139,9 +139,9 @@ namespace QuanLyNganHang
                 }
 
                 //Bước 2: Xoá STK trong ListView
-                int indexSelectItem = int.Parse(listViewDanhSachSo.SelectedItems[0].SubItems[0].Text) - 1;
+                int indexSelectItem = listViewDanhSachSo.Items.IndexOf(listViewDanhSachSo.SelectedItems[0]);
 
-                listViewDanhSachSo.Items.Remove(listViewDanhSachSo.SelectedItems[0]);
+                listViewDanhSachSo.Items.RemoveAt(indexSelectItem);
 
                 //Bước 3: Đặt lại số thứ tự
                 for (int i = indexSelectItem; i < listViewDanhSachSo.Items.Count; i++)
@@ -166,8 +166,8 @@ namespace QuanLyNganHang
 
             //CoKyHan stkCoKyHan = new CoKyHan();
 
-            //Form2 frm2 = new Form2();
-            //frm2.stk = stkCoKyHan;
+            frmCapNhap frm = new frmCapNhap();
+            frm.ShowDialog();
             
         }
     }
