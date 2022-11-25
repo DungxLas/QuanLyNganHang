@@ -7,6 +7,9 @@ namespace QuanLyNganHang
             InitializeComponent();
         }
 
+
+        NganHang nganhang = new NganHang();
+
         private void Form1_Load(object sender, EventArgs e)
         {
             cBxKyHanGui.Items.Add("01 tháng / 5.65%");
@@ -40,8 +43,6 @@ namespace QuanLyNganHang
         private void btnThem_Click(object sender, EventArgs e)
         {
             List<string> arr = new List<string>(); //Tạo 1 mảng để nạp dữ liệu vào mảng đó
-
-            NganHang nganhang = new NganHang();
 
             //Đang chọn sổ có kỳ hạn
             if (rBtnGuiCoKyHan.Checked == true)
