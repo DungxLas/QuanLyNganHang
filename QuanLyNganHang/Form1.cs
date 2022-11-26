@@ -12,11 +12,11 @@ namespace QuanLyNganHang
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            cBxKyHanGui.Items.Add("01 tháng / 5.65%");
-            cBxKyHanGui.Items.Add("03 tháng / 6.00%");
-            cBxKyHanGui.Items.Add("06 tháng / 7.60%");
-            cBxKyHanGui.Items.Add("12 tháng / 8.04%");
-            cBxKyHanGui.Items.Add("18 tháng / 8.40%");
+            cBxKyHanGui.Items.Add("1 tháng / 5.65 %");
+            cBxKyHanGui.Items.Add("3 tháng / 6 %");
+            cBxKyHanGui.Items.Add("6 tháng / 7.6 %");
+            cBxKyHanGui.Items.Add("12 tháng / 8.04 %");
+            cBxKyHanGui.Items.Add("18 tháng / 8.4 %");
 
             cBxKyHanGui.SelectedIndex = 0;
         }
@@ -158,15 +158,16 @@ namespace QuanLyNganHang
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            //string HoTenKhachHang = listViewDanhSachSo.SelectedItems[0].SubItems[0].Text;
-            //string cmnd = listViewDanhSachSo.SelectedItems[0].SubItems[1].Text;
-            //double SoTienGui = double.Parse(listViewDanhSachSo.SelectedItems[0].SubItems[2].Text);
-            //string NgayLapSo = listViewDanhSachSo.SelectedItems[0].SubItems[3].Text;
-            //string LaiSuat = listViewDanhSachSo.SelectedItems[0].SubItems[4].Text; ;
-
-            //CoKyHan stkCoKyHan = new CoKyHan();
-
             frmCapNhap frm = new frmCapNhap();
+            
+            //frm.stt = listViewDanhSachSo.SelectedItems[0].SubItems[0].Text;
+            frm.HoTenKhachHang = listViewDanhSachSo.SelectedItems[0].SubItems[1].Text;
+            frm.cmnd = listViewDanhSachSo.SelectedItems[0].SubItems[2].Text;
+            frm.SoTienGui = listViewDanhSachSo.SelectedItems[0].SubItems[3].Text;
+            frm.NgayLapSo = listViewDanhSachSo.SelectedItems[0].SubItems[4].Text;
+            frm.KyHanLaiSuat = listViewDanhSachSo.SelectedItems[0].SubItems[5].Text;
+            //frm. maSTK = listViewDanhSachSo.SelectedItems[0].SubItems[6].Text;
+
             frm.ShowDialog();
             
         }
