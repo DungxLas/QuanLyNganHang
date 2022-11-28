@@ -43,6 +43,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtBxLaiSuatKoKyHan = new System.Windows.Forms.TextBox();
             this.lblLaiSuat = new System.Windows.Forms.Label();
+            this.btnSua = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblKyHanGui
@@ -183,7 +184,7 @@
             this.txtBxLaiSuatKoKyHan.Name = "txtBxLaiSuatKoKyHan";
             this.txtBxLaiSuatKoKyHan.Size = new System.Drawing.Size(42, 29);
             this.txtBxLaiSuatKoKyHan.TabIndex = 47;
-            this.txtBxLaiSuatKoKyHan.Text = "1%";
+            this.txtBxLaiSuatKoKyHan.Text = "1 %";
             this.txtBxLaiSuatKoKyHan.Visible = false;
             // 
             // lblLaiSuat
@@ -197,11 +198,22 @@
             this.lblLaiSuat.Text = "Lãi suất";
             this.lblLaiSuat.Visible = false;
             // 
+            // btnSua
+            // 
+            this.btnSua.Location = new System.Drawing.Point(183, 520);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(384, 37);
+            this.btnSua.TabIndex = 48;
+            this.btnSua.Text = "Xác Nhận Sửa Thông Tin";
+            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
             // frmCapNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(703, 630);
+            this.Controls.Add(this.btnSua);
             this.Controls.Add(this.txtBxLaiSuatKoKyHan);
             this.Controls.Add(this.lblLaiSuat);
             this.Controls.Add(this.lblKyHanGui);
@@ -244,5 +256,6 @@
         private Label label1;
         private TextBox txtBxLaiSuatKoKyHan;
         private Label lblLaiSuat;
+        private Button btnSua;
     }
 }

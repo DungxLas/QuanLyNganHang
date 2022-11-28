@@ -1,6 +1,6 @@
 ﻿namespace QuanLyNganHang
 {
-    partial class Form1
+    partial class frmQuanLyNganHang
     {
         /// <summary>
         ///  Required designer variable.
@@ -321,10 +321,10 @@
             this.txtBxLaiSuatKoKyHan.Name = "txtBxLaiSuatKoKyHan";
             this.txtBxLaiSuatKoKyHan.Size = new System.Drawing.Size(42, 32);
             this.txtBxLaiSuatKoKyHan.TabIndex = 35;
-            this.txtBxLaiSuatKoKyHan.Text = "1%";
+            this.txtBxLaiSuatKoKyHan.Text = "1 %";
             this.txtBxLaiSuatKoKyHan.Visible = false;
             // 
-            // Form1
+            // frmQuanLyNganHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -353,7 +353,7 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Margin = new System.Windows.Forms.Padding(5);
-            this.Name = "Form1";
+            this.Name = "frmQuanLyNganHang";
             this.Text = "Quản lý ngân Hàng";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);

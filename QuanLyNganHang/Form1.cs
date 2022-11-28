@@ -1,14 +1,15 @@
 namespace QuanLyNganHang
 {
-    public partial class Form1 : Form
+    public partial class frmQuanLyNganHang : Form
     {
-        public Form1()
+        public frmQuanLyNganHang()
         {
             InitializeComponent();
         }
 
 
         NganHang nganhang = new NganHang();
+        public static string stt, HoTenKhachHang, cmnd, SoTienGui, NgayLapSo, KyHanLaiSuat, maSTK;
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -153,7 +154,6 @@ namespace QuanLyNganHang
             {
                 MessageBox.Show("Sau nhớ nghĩ kĩ rồi hay chọn", "Thông báo", MessageBoxButtons.OK);
             }
-            
         }
 
         private void btnSua_Click(object sender, EventArgs e)

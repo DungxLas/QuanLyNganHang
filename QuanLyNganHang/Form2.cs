@@ -95,5 +95,73 @@ namespace QuanLyNganHang
             lblLaiSuat.Visible = true;
             txtBxLaiSuatKoKyHan.Visible = true;
         }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            DialogResult dlr = MessageBox.Show("Bạn chắc chắn muốn sửa thông tin sổ tiết kiệm chứ ???", "Thông báo", MessageBoxButtons.YesNo);
+
+            if (dlr == DialogResult.Yes)
+            {
+                frmQuanLyNganHang.HoTenKhachHang = txtBxTenKhachHang.Text;
+                frmQuanLyNganHang.cmnd = txtBxCMND.Text;
+                frmQuanLyNganHang.SoTienGui = txtBxSoTienGui.Text;
+                frmQuanLyNganHang.NgayLapSo = dtpNgayLapSo.Value.ToString("dd/MM/yyyy");
+                //Đang chọn sổ có kỳ hạn
+                if (rBtnGuiCoKyHan.Checked == true)
+                {
+                    double LaiSuat = 0;
+                    int KyHan = 0;
+
+                    switch (cBxKyHanGui.SelectedIndex)
+                    {
+                        case 0:
+                            {
+                                LaiSuat = 5.65;
+                                KyHan = 1;
+                                break;
+                            }
+                        case 1:
+                            {
+                                LaiSuat = 6;
+                                KyHan = 3;
+                                break;
+                            }
+                        case 2:
+                            {
+                                LaiSuat = 7.6;
+                                KyHan = 6;
+                                break;
+                            }
+                        case 3:
+                            {
+                                LaiSuat = 8.04;
+                                KyHan = 12;
+                                break;
+                            }
+                        case 4:
+                            {
+                                LaiSuat = 8.4;
+                                KyHan = 18;
+                                break;
+                            }
+                    }
+
+                    frmQuanLyNganHang.KyHanLaiSuat = KyHan.ToString() + " tháng / " + LaiSuat.ToString() + " %";  
+                }
+                //Đamg chọn sổ không kỳ hạn
+                else if (rBtnGuiKoKyHan.Checked == true)
+                {
+                    frmQuanLyNganHang.KyHanLaiSuat = " Không kỳ hạn / " + txtBxLaiSuatKoKyHan.Text;
+                }
+
+                MessageBox.Show("\nThêm thành công sổ tiết kiệm");
+
+                this.Close();
+            }
+            else if (dlr == DialogResult.No)
+            {
+                MessageBox.Show("Sau nhớ nghĩ kĩ rồi hay chọn", "Thông báo", MessageBoxButtons.OK);
+            }
+        }
     }
 }
