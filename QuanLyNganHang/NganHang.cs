@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QuanLyNganHang
 {
-    internal class NganHang
+    public class NganHang
     {
         private List<CoKyHan> ListSoCoKyHan = new List<CoKyHan>();
         private List<KoKyHan> ListSoKoKyHan = new List<KoKyHan>();

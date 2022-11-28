@@ -156,6 +156,8 @@ namespace QuanLyNganHang
                     frmQuanLyNganHang.KyHanLaiSuat = " Không kỳ hạn / " + txtBxLaiSuatKoKyHan.Text;
                 }
 
+                frmQuanLyNganHang.nganhang.xoaSTKKoKyHan(txtBxTenKhachHang.Text);
+
                 MessageBox.Show("\nThêm thành công sổ tiết kiệm");
 
                 this.Close();
