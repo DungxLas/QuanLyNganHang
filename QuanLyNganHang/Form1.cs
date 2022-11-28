@@ -185,5 +185,15 @@ namespace QuanLyNganHang
                 //Cập nhập dữ liệu vào list nganhang bên form cập nhập
             }
         }
+
+        public static string cmnd_TimKiem;
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            frmTimKiem frm = new frmTimKiem();
+
+            frm.ShowDialog();
+
+
+        }
     }
 }

@@ -37,10 +37,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.rBtnGuiCoKyHan = new System.Windows.Forms.RadioButton();
             this.rBtnGuiKoKyHan = new System.Windows.Forms.RadioButton();
             this.lblKyHanGui = new System.Windows.Forms.Label();
@@ -124,7 +122,7 @@
             // 
             this.btnThem.Location = new System.Drawing.Point(81, 331);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(75, 31);
+            this.btnThem.Size = new System.Drawing.Size(101, 31);
             this.btnThem.TabIndex = 20;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
@@ -132,50 +130,33 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(180, 331);
+            this.btnXoa.Location = new System.Drawing.Point(238, 331);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(75, 31);
+            this.btnXoa.Size = new System.Drawing.Size(101, 31);
             this.btnXoa.TabIndex = 21;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
-            // button3
+            // btnTimKiem
             // 
-            this.button3.Location = new System.Drawing.Point(377, 331);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 31);
-            this.button3.TabIndex = 23;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Location = new System.Drawing.Point(533, 331);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(101, 31);
+            this.btnTimKiem.TabIndex = 23;
+            this.btnTimKiem.Text = "Tìm kiếm";
+            this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(278, 331);
+            this.btnSua.Location = new System.Drawing.Point(384, 331);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(75, 31);
+            this.btnSua.Size = new System.Drawing.Size(101, 31);
             this.btnSua.TabIndex = 22;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(583, 331);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 31);
-            this.button5.TabIndex = 25;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(484, 331);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 31);
-            this.button6.TabIndex = 24;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
             // 
             // rBtnGuiCoKyHan
             // 
@@ -336,9 +317,7 @@
             this.Controls.Add(this.cBxKyHanGui);
             this.Controls.Add(this.dtpNgayLapSo);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnThem);
@@ -372,10 +351,8 @@
         private Label label8;
         private Button btnThem;
         private Button btnXoa;
-        private Button button3;
+        private Button btnTimKiem;
         private Button btnSua;
-        private Button button5;
-        private Button button6;
         private RadioButton rBtnGuiCoKyHan;
         private RadioButton rBtnGuiKoKyHan;
         private Label lblKyHanGui;
