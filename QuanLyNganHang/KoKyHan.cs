@@ -27,13 +27,21 @@ namespace QuanLyNganHang
         {
             List<string> stk = new List<string>();
             stk.Add(HoTen);
-            stk.Add(cmnd);
+            stk.Add(Cmnd);
             stk.Add(SoTienGui.ToString());
             stk.Add(NgayLapSo.ToString("dd/MM/yyyy"));
             stk.Add(" Không kỳ hạn / " + LaiSuat.ToString() + " %");
             stk.Add(maSTK);
 
             return stk;
+        }
+
+        public void capNhapSTK(string hoTen, string cmnd, double soTienGui, DateTime ngayLapSo)
+        {
+            this.Cmnd = cmnd;
+            HoTen = hoTen;
+            SoTienGui = soTienGui;
+            NgayLapSo = ngayLapSo;
         }
     }
 }

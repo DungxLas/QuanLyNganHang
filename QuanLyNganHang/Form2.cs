@@ -148,15 +148,19 @@ namespace QuanLyNganHang
                             }
                     }
 
-                    frmQuanLyNganHang.KyHanLaiSuat = KyHan.ToString() + " tháng / " + LaiSuat.ToString() + " %";  
+                    frmQuanLyNganHang.KyHanLaiSuat = KyHan.ToString() + " tháng / " + LaiSuat.ToString() + " %";
+
+                    int index_STK_muonSua = frmQuanLyNganHang.nganhang.timSTKCoKyHan(maSTK);
+                    frmQuanLyNganHang.nganhang.listSoCoKyHan[index_STK_muonSua].capNhapSTK(txtBxTenKhachHang.Text, txtBxCMND.Text, double.Parse(txtBxSoTienGui.Text), dtpNgayLapSo.Value, LaiSuat, KyHan);
                 }
                 //Đamg chọn sổ không kỳ hạn
                 else if (rBtnGuiKoKyHan.Checked == true)
                 {
                     frmQuanLyNganHang.KyHanLaiSuat = " Không kỳ hạn / " + txtBxLaiSuatKoKyHan.Text;
-                }
 
-                frmQuanLyNganHang.nganhang.xoaSTKKoKyHan(txtBxTenKhachHang.Text);
+                    int index_STK_muonSua = frmQuanLyNganHang.nganhang.timSTKKoKyHan(maSTK);
+                    frmQuanLyNganHang.nganhang.listSoKoKyHan[index_STK_muonSua].capNhapSTK(txtBxTenKhachHang.Text, txtBxCMND.Text, double.Parse(txtBxSoTienGui.Text), dtpNgayLapSo.Value);
+                }
 
                 MessageBox.Show("\nThêm thành công sổ tiết kiệm");
 

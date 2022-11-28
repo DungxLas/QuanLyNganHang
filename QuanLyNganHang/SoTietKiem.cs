@@ -8,14 +8,18 @@ namespace QuanLyNganHang
 {
     internal class SoTietKiem
     {
-        protected string cmnd;
-        protected string HoTen;
-        protected double SoTienGui;
-        protected DateTime NgayLapSo;
-        protected double LaiSuat;
+        private string cmnd;
+        private string hoTen;
+        private double soTienGui;
+        private DateTime ngayLapSo;
+        private double laiSuat;
         protected string maSTK;
 
-        //protected string MaSTK { get => maSTK; set => maSTK = value; }
+        protected string Cmnd { get => cmnd; set => cmnd = value; }
+        protected string HoTen { get => hoTen; set => hoTen = value; }
+        protected double SoTienGui { get => soTienGui; set => soTienGui = value; }
+        protected DateTime NgayLapSo { get => ngayLapSo; set => ngayLapSo = value; }
+        protected double LaiSuat { get => laiSuat; set => laiSuat = value; }
 
         public string taoMaSTK()
         {
@@ -39,7 +43,7 @@ namespace QuanLyNganHang
             HoTen = " ";
             SoTienGui = 0;
             NgayLapSo = new DateTime();
-            LaiSuat = 0;
+            LaiSuat = 1;
             maSTK = " ";
         }
 

@@ -168,7 +168,7 @@ namespace QuanLyNganHang
             frm.SoTienGui = listViewDanhSachSo.SelectedItems[0].SubItems[3].Text;
             frm.NgayLapSo = listViewDanhSachSo.SelectedItems[0].SubItems[4].Text;
             frm.KyHanLaiSuat = listViewDanhSachSo.SelectedItems[0].SubItems[5].Text;
-            //frm. maSTK = listViewDanhSachSo.SelectedItems[0].SubItems[6].Text;
+            frm. maSTK = listViewDanhSachSo.SelectedItems[0].SubItems[6].Text;
 
             frm.ShowDialog();
 
@@ -182,12 +182,12 @@ namespace QuanLyNganHang
                 listViewDanhSachSo.SelectedItems[0].SubItems[4].Text = NgayLapSo;
                 listViewDanhSachSo.SelectedItems[0].SubItems[5].Text = KyHanLaiSuat;
 
-                //Cập nhập dữ liệu vào list nganhang
+                //Cập nhập dữ liệu vào list nganhang bên form cập nhập
 
             }
 
-            
-            
+
+
         }
     }
 }
