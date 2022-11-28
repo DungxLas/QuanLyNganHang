@@ -153,7 +153,7 @@ namespace QuanLyNganHang
                     int index_STK_muonSua = frmQuanLyNganHang.nganhang.timSTKCoKyHan(maSTK);
                     frmQuanLyNganHang.nganhang.listSoCoKyHan[index_STK_muonSua].capNhapSTK(txtBxTenKhachHang.Text, txtBxCMND.Text, double.Parse(txtBxSoTienGui.Text), dtpNgayLapSo.Value, LaiSuat, KyHan);
                 }
-                //Đamg chọn sổ không kỳ hạn
+                //Đang chọn sổ không kỳ hạn
                 else if (rBtnGuiKoKyHan.Checked == true)
                 {
                     frmQuanLyNganHang.KyHanLaiSuat = " Không kỳ hạn / " + txtBxLaiSuatKoKyHan.Text;
@@ -162,7 +162,7 @@ namespace QuanLyNganHang
                     frmQuanLyNganHang.nganhang.listSoKoKyHan[index_STK_muonSua].capNhapSTK(txtBxTenKhachHang.Text, txtBxCMND.Text, double.Parse(txtBxSoTienGui.Text), dtpNgayLapSo.Value);
                 }
 
-                MessageBox.Show("\nThêm thành công sổ tiết kiệm");
+                MessageBox.Show("\nCập nhật thành công sổ tiết kiệm");
 
                 this.Close();
             }

@@ -183,11 +183,7 @@ namespace QuanLyNganHang
                 listViewDanhSachSo.SelectedItems[0].SubItems[5].Text = KyHanLaiSuat;
 
                 //Cập nhập dữ liệu vào list nganhang bên form cập nhập
-
             }
-
-
-
         }
     }
 }
