@@ -10,6 +10,7 @@ namespace QuanLyNganHang
 
         NganHang nganhang = new NganHang();
         public static string stt, HoTenKhachHang, cmnd, SoTienGui, NgayLapSo, KyHanLaiSuat, maSTK;
+        public static bool check;
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -158,6 +159,7 @@ namespace QuanLyNganHang
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            //Bước 1: Cập nhập dữ liệu từ form quản lý ngân hàng sang form cập nhập
             frmCapNhap frm = new frmCapNhap();
             
             //frm.stt = listViewDanhSachSo.SelectedItems[0].SubItems[0].Text;
@@ -169,7 +171,16 @@ namespace QuanLyNganHang
             //frm. maSTK = listViewDanhSachSo.SelectedItems[0].SubItems[6].Text;
 
             frm.ShowDialog();
-            
+
+            //Bước 2: Nhận lại dữ liệu form cập nhập lại form quản lý ngân hàng
+            if (check == true)
+            {
+                listViewDanhSachSo.SelectedItems[0].SubItems[1].Text = HoTenKhachHang;
+                listViewDanhSachSo.SelectedItems[0].SubItems[2].Text = cmnd;
+                listViewDanhSachSo.SelectedItems[0].SubItems[3].Text = SoTienGui;
+                listViewDanhSachSo.SelectedItems[0].SubItems[4].Text = NgayLapSo;
+                listViewDanhSachSo.SelectedItems[0].SubItems[5].Text = KyHanLaiSuat;
+            }    
         }
     }
 }

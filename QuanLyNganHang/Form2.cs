@@ -102,6 +102,8 @@ namespace QuanLyNganHang
 
             if (dlr == DialogResult.Yes)
             {
+                frmQuanLyNganHang.check = true;
+
                 frmQuanLyNganHang.HoTenKhachHang = txtBxTenKhachHang.Text;
                 frmQuanLyNganHang.cmnd = txtBxCMND.Text;
                 frmQuanLyNganHang.SoTienGui = txtBxSoTienGui.Text;
@@ -160,6 +162,8 @@ namespace QuanLyNganHang
             }
             else if (dlr == DialogResult.No)
             {
+                frmQuanLyNganHang.check = false;
+
                 MessageBox.Show("Sau nhớ nghĩ kĩ rồi hay chọn", "Thông báo", MessageBoxButtons.OK);
             }
         }
