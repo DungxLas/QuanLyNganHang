@@ -1,3 +1,6 @@
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
+using System;
+
 namespace QuanLyNganHang
 {
     public partial class frmQuanLyNganHang : Form
@@ -190,10 +193,17 @@ namespace QuanLyNganHang
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             frmTimKiem frm = new frmTimKiem();
-
             frm.ShowDialog();
 
-
+            //Duyệt qua danh sách listView đang có và tim ra các dòng có CMND trùng thì tô đỏ
+            for (int i = 0; i < listViewDanhSachSo.Items.Count; i++)
+            {
+                if (listViewDanhSachSo.Items[i].SubItems[2].Text == cmnd_TimKiem)
+                {
+                    listViewDanhSachSo.Items[i].BackColor = Color.Red;
+                    break;
+                }    
+            }
         }
     }
 }

@@ -46,7 +46,7 @@
             // txtTimKiem
             // 
             this.txtTimKiem.Location = new System.Drawing.Point(177, 97);
-            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(4);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(450, 29);
             this.txtTimKiem.TabIndex = 1;
@@ -54,7 +54,7 @@
             // btnTimKiem
             // 
             this.btnTimKiem.Location = new System.Drawing.Point(104, 155);
-            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(4);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(523, 32);
             this.btnTimKiem.TabIndex = 2;
@@ -71,7 +71,7 @@
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmTimKiem";
             this.Text = "Tìm kiếm";
             this.ResumeLayout(false);

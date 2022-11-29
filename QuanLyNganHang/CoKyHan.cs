@@ -50,10 +50,5 @@ namespace QuanLyNganHang
             LaiSuat = laiSuat;
             KyHan = kyHan;
         }
-
-        public double TinhTienLoi()
-        {
-            return SoTienGui * LaiSuat * KyHan;
-        }
     }
 }
